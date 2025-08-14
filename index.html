@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Название приложения — Ссылка на Google Play</title>
     <meta name="description" content="Страница загрузки приложения — ссылка на Google Play и политика конфиденциальности." />
-    <!-- Open Graph (замените значения при необходимости) -->
-    <meta property="og:title" content="Название приложения" />
-    <meta property="og:description" content="Краткое описание вашего приложения." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com" />
     <style>
-        :root{--bg:#f7f8fb;--card:#ffffff;--accent:#1a73e8;--muted:#6b7280}
+        :root{--bg:#1f1f1f;--card:#2c2c2c;--accent:#1a73e8;--muted:#b0b0b0}
         *{box-sizing:border-box}
-        body{margin:0;font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial; background:linear-gradient(180deg,var(--bg),#eef2ff);color:#0f172a}
+        body{margin:0;font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial; background:var(--bg);color:white}
         .wrap{max-width:980px;margin:48px auto;padding:24px}
-        .card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 6px 30px rgba(16,24,40,0.08)}
+        .card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
         .head{display:flex;gap:18px;align-items:center}
         .logo{width:84px;height:84px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#6c5ce7);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
         h1{margin:0;font-size:22px}
         p.lead{margin:8px 0 18px;color:var(--muted)}
         .buttons{display:flex;gap:12px;flex-wrap:wrap}
-        .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-        .btn-play{background:#111827;color:white}
-        .btn-privacy{background:transparent;border:1px solid #e6e9ef;color:var(--muted)}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:10px;text-decoration:none;font-weight:600;height:56px; padding:0 14px;}
+        .btn-play{background:transparent;color:white;padding:0;border-radius:0}
+        .btn-play img{height:100%}
+        .btn-privacy{background:transparent;border:1px solid #555;color:var(--muted)}
         .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px}
-        .feature{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;border:1px dashed #eef2ff}
+        .feature{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;border:1px dashed #333}
         .feature svg{flex-shrink:0;margin-top:4px}
         footer{margin-top:20px;color:var(--muted);font-size:13px}
         @media (max-width:600px){.head{flex-direction:row}.logo{width:68px;height:68px}}
@@ -37,21 +33,17 @@
         <div class="head">
             <div class="logo">App</div>
             <div>
-                <h1>Trust Feed</h1>
+                <h1>Название приложения</h1>
                 <p class="lead">Краткое однострочное описание приложения — зачем оно нужно пользователям.</p>
                 <div class="buttons">
-                    <!-- Замените href на реальную ссылку в Google Play -->
-                    <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.trust.feed" target="_blank" rel="noopener noreferrer">
-                        <!-- Простая SVG-иконка Google Play (неофициальная) -->
-                        <img src="_includes/play_icon_2.jpg" alt="Иконка сайта" height="40">
-                        Скачать в Google Play
+                    <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=YOUR.APP.ID" target="_blank" rel="noopener noreferrer">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" alt="Доступно в Google Play">
                     </a>
-
-            <!-- Замените href на ссылку на политику конфиденциальности -->
-            <a class="btn privacy" href="PRIVACY_POLICY_LINK" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+                    <a class="btn btn-privacy" href="https://example.com/privacy-policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Блок преимуществ (удалите, если не нужен) -->
         <div class="features" aria-label="Преимущества приложения">
             <div class="feature">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
@@ -91,17 +83,7 @@
 </main>
 
 <script>
-    // Автозаполнение текущего года
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    /*
-      Подсказки по настройке:
-      - Замените href у кнопки Google Play на вашу реальную ссылку:
-        https://play.google.com/store/apps/details?id=ВАШ_ИДЕНТИФИКАТОР
-      - Замените ссылку политики конфиденциальности на реальную страницу.
-      - Чтобы убрать блок "Преимущества", удалите элемент <div class="features">...</div>.
-      - Можно заменить логотип (div.logo) на <img src="..." alt="Логотип"/>
-    */
 </script>
 </body>
 </html>
