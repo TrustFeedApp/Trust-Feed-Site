@@ -1,86 +1,112 @@
----
-layout: default
-title: Скачать приложение
----
-
 <!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Скачать приложение Trust Feed — удобный способ следить за ... (короткое описание)" />
-
-    <!-- Schema.org — SoftwareApplication -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Trust Feed",
-            "operatingSystem": "ANDROID",
-            "applicationCategory": "BusinessApplication",
-            "url": "https://trustfeedapp.github.io/",
-            "offers": {
-                "@type": "Offer",
-                "url": "PLAY_STORE_URL"
-            }
-        }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Название приложения — Ссылка на Google Play</title>
+    <meta name="description" content="Страница загрузки приложения — ссылка на Google Play и политика конфиденциальности." />
+    <!-- Open Graph (замените значения при необходимости) -->
+    <meta property="og:title" content="Название приложения" />
+    <meta property="og:description" content="Краткое описание вашего приложения." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
     <style>
-        /* Минимальные стили — подойдут, если тема не перекроет их */
-        .hero { max-width: 900px; margin: 2rem auto; padding: 1.5rem; text-align: center; }
-        .play-btn { display: inline-block; margin-top: 1rem; text-decoration: none; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-top: 1.5rem; }
-        .feature { border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa; }
-        .meta-links { margin-top: 1.25rem; font-size: 0.95rem; }
-        .privacy { color: inherit; text-decoration: underline; }
-        @media (prefers-color-scheme: dark) {
-          .feature { background: #0b0b0b; border-color: #222; }
-        }
+        :root{--bg:#f7f8fb;--card:#ffffff;--accent:#1a73e8;--muted:#6b7280}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial; background:linear-gradient(180deg,var(--bg),#eef2ff);color:#0f172a}
+        .wrap{max-width:980px;margin:48px auto;padding:24px}
+        .card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 6px 30px rgba(16,24,40,0.08)}
+        .head{display:flex;gap:18px;align-items:center}
+        .logo{width:84px;height:84px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#6c5ce7);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+        h1{margin:0;font-size:22px}
+        p.lead{margin:8px 0 18px;color:var(--muted)}
+        .buttons{display:flex;gap:12px;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+        .btn-play{background:#111827;color:white}
+        .btn-privacy{background:transparent;border:1px solid #e6e9ef;color:var(--muted)}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px}
+        .feature{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;border:1px dashed #eef2ff}
+        .feature svg{flex-shrink:0;margin-top:4px}
+        footer{margin-top:20px;color:var(--muted);font-size:13px}
+        @media (max-width:600px){.head{flex-direction:row}.logo{width:68px;height:68px}}
     </style>
 </head>
 <body>
-<main class="hero" role="main">
-    <h1>Trust Feed — мобильное приложение</h1>
-    <p>Удобный способ следить за обновлениями и получать важные уведомления прямо на телефон.</p>
+<main class="wrap">
+    <section class="card">
+        <div class="head">
+            <div class="logo">App</div>
+            <div>
+                <h1>Название приложения</h1>
+                <p class="lead">Краткое однострочное описание приложения — зачем оно нужно пользователям.</p>
+                <div class="buttons">
+                    <!-- Замените href на реальную ссылку в Google Play -->
+                    <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.trust.feed" target="_blank" rel="noopener noreferrer">
+                        <!-- Простая SVG-иконка Google Play (неофициальная) -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                            <path d="M3.6 2.6 14.6 11.2 3.6 19.8 3.6 2.6z" fill="currentColor" opacity="0.9"/>
+                            <path d="M14.6 2.8c.6.2 1.6.6 2.3 1.2l-4.3 4.1L14.6 2.8z" fill="currentColor" opacity="0.7"/>
+                        </svg>
+                        Скачать в Google Play
+                    </a>
 
-    <!-- Замените PLAY_STORE_URL на ссылку вашего приложения в Google Play -->
-    <a class="play-btn" href="PLAY_STORE_URL" target="_blank" rel="noopener noreferrer">
-        <!-- Официальный бейдж Google Play (можно заменить на локальный ресурс) -->
-        <img alt="Get it on Google Play" style="height:64px;" src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" />
-    </a>
+                    <!-- Ссылка на политику конфиденциальности -->
+                    <a class="btn btn-privacy" href="/privacy.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
 
-    <div class="meta-links">
-        <!-- Замените PRICACY_URL на реальную страницу политики конфиденциальности -->
-        <a class="privacy" href="PRIVACY_URL" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
-    </div>
+        <!-- Блок преимуществ (удалите, если не нужен) -->
+        <div class="features" aria-label="Преимущества приложения">
+            <div class="feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                    <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#10B981"/>
+                </svg>
+                <div>
+                    <strong>Быстро и удобно</strong>
+                    <div style="color:var(--muted)">Интуитивный интерфейс и молниеносная работа.</div>
+                </div>
+            </div>
 
-    <!-- Опционально: преимущества приложения -->
-    <section class="features" aria-label="Преимущества приложения">
-        <article class="feature">
-            <h3>Быстро</h3>
-            <p>Моментальные уведомления и лаконичный интерфейс — всё, чтобы не терять время.</p>
-        </article>
+            <div class="feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                    <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#10B981"/>
+                </svg>
+                <div>
+                    <strong>Безопасность данных</strong>
+                    <div style="color:var(--muted)">Шифрование и строгая политика конфиденциальности.</div>
+                </div>
+            </div>
 
-        <article class="feature">
-            <h3>Надёжно</h3>
-            <p>Данные сохраняются безопасно — пользователь контролирует доступ и настройки приватности.</p>
-        </article>
+            <div class="feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                    <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#10B981"/>
+                </svg>
+                <div>
+                    <strong>Поддержка 24/7</strong>
+                    <div style="color:var(--muted)">Готовы помочь в любое время через чат и email.</div>
+                </div>
+            </div>
+        </div>
 
-        <article class="feature">
-            <h3>Удобно</h3>
-            <p>Интуитивная навигация, понятные настройки и быстрый поиск по контенту.</p>
-        </article>
-
-        <article class="feature">
-            <h3>Поддержка</h3>
-            <p>Помощь в одну кнопку: встроенный раздел «Помощь и обратная связь» внутри приложения.</p>
-        </article>
+        <footer>
+            <div>© <span id="year"></span> Название компании. Все права защищены.</div>
+        </footer>
     </section>
 </main>
 
-<footer style="text-align:center; margin:2rem 0; font-size:0.9rem;">
-    © {{ site.time | date: "%Y" }} Trust Feed. <a href="PRIVACY_URL" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
-</footer>
+<script>
+    // Автозаполнение текущего года
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /*
+      Подсказки по настройке:
+      - Замените href у кнопки Google Play на вашу реальную ссылку:
+        https://play.google.com/store/apps/details?id=ВАШ_ИДЕНТИФИКАТОР
+      - Замените ссылку политики конфиденциальности на реальную страницу.
+      - Чтобы убрать блок "Преимущества", удалите элемент <div class="features">...</div>.
+      - Можно заменить логотип (div.logo) на <img src="..." alt="Логотип"/>
+    */
+</script>
 </body>
 </html>
