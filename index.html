@@ -1,14 +1,86 @@
 ---
 layout: default
-title: Главная
+title: Скачать приложение
 ---
 
-<body>
-    <h1>Добро пожаловать!</h1>
-    <p>Это мой сайт на GitHub Pages с темой <strong>jekyll-theme-minimal</strong>.</p>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Скачать приложение Trust Feed — удобный способ следить за ... (короткое описание)" />
 
-    <ul>
-        <li><a href="about.html">Обо мне</a></li>
-        <li><a href="contact.html">Контакты</a></li>
-    </ul>
+    <!-- Schema.org — SoftwareApplication -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Trust Feed",
+            "operatingSystem": "ANDROID",
+            "applicationCategory": "BusinessApplication",
+            "url": "https://trustfeedapp.github.io/",
+            "offers": {
+                "@type": "Offer",
+                "url": "PLAY_STORE_URL"
+            }
+        }
+    </script>
+
+    <style>
+        /* Минимальные стили — подойдут, если тема не перекроет их */
+        .hero { max-width: 900px; margin: 2rem auto; padding: 1.5rem; text-align: center; }
+        .play-btn { display: inline-block; margin-top: 1rem; text-decoration: none; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .feature { border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa; }
+        .meta-links { margin-top: 1.25rem; font-size: 0.95rem; }
+        .privacy { color: inherit; text-decoration: underline; }
+        @media (prefers-color-scheme: dark) {
+          .feature { background: #0b0b0b; border-color: #222; }
+        }
+    </style>
+</head>
+<body>
+<main class="hero" role="main">
+    <h1>Trust Feed — мобильное приложение</h1>
+    <p>Удобный способ следить за обновлениями и получать важные уведомления прямо на телефон.</p>
+
+    <!-- Замените PLAY_STORE_URL на ссылку вашего приложения в Google Play -->
+    <a class="play-btn" href="PLAY_STORE_URL" target="_blank" rel="noopener noreferrer">
+        <!-- Официальный бейдж Google Play (можно заменить на локальный ресурс) -->
+        <img alt="Get it on Google Play" style="height:64px;" src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" />
+    </a>
+
+    <div class="meta-links">
+        <!-- Замените PRICACY_URL на реальную страницу политики конфиденциальности -->
+        <a class="privacy" href="PRIVACY_URL" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+    </div>
+
+    <!-- Опционально: преимущества приложения -->
+    <section class="features" aria-label="Преимущества приложения">
+        <article class="feature">
+            <h3>Быстро</h3>
+            <p>Моментальные уведомления и лаконичный интерфейс — всё, чтобы не терять время.</p>
+        </article>
+
+        <article class="feature">
+            <h3>Надёжно</h3>
+            <p>Данные сохраняются безопасно — пользователь контролирует доступ и настройки приватности.</p>
+        </article>
+
+        <article class="feature">
+            <h3>Удобно</h3>
+            <p>Интуитивная навигация, понятные настройки и быстрый поиск по контенту.</p>
+        </article>
+
+        <article class="feature">
+            <h3>Поддержка</h3>
+            <p>Помощь в одну кнопку: встроенный раздел «Помощь и обратная связь» внутри приложения.</p>
+        </article>
+    </section>
+</main>
+
+<footer style="text-align:center; margin:2rem 0; font-size:0.9rem;">
+    © {{ site.time | date: "%Y" }} Trust Feed. <a href="PRIVACY_URL" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+</footer>
 </body>
+</html>
